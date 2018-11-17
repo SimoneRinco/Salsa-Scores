@@ -1,123 +1,154 @@
 \version "2.18.2"
 
-
-bridge_repeat = {
-  r8 c'4 bes8 c4 aes8 bes~ |
-  bes8 a4 bes8~ bes r c, c |
-  \tuplet 3/2 {c4 e g} des' c8 f,~ |  
-}
-
-bridge_two_repeat = {
-  r8 f f f f es c des~ |
-  des bes4 c8~ c des4 c8~ |
-  c8 e4 g,8 \acciaccatura a8 bes4. aes8~ |
-}
-
 \header {
-  title = "Idilio"
+  title = "Lagrimas negras"
 }
 
 global = {
   \set Score.markFormatter = #format-mark-box-letters
-  \key f \minor
+  \key a \minor
   \time 2/2
 }
 
-trumpetBb = \relative c'' {
+trumpetBb = \relative c' {
   \global
   \compressFullBarRests  
   \transposition bes
+  
+  % A
   \mark \default
-  \partial 8 c8 |
-  f4 f8 es~ es f es4 |
-  \acciaccatura ees8 f8 es4 des8 es4 des8 f8~ |
-  f8 des bes4 r2 |
-  r2 r8 bes c des |
-  ees g f ees des c bes aes |
-  g4 r8 ees f ees f g |
-  aes2 r4. aes,8~ |
-  \tuplet 3/2 2 {aes4 ces ees g aes bes} |
-  \acciaccatura {aes16 bes} ces2~ ces8 bes4 aes8 |
-  \acciaccatura bes ces4 ces8 ces~ ces bes4 aes8 |
-  b8 c g4~ g8 r r4 |
-  r8 \acciaccatura c8 des4 c8 f4 e8 c~ |
-  c2~ c8 ces4 bes8~ |
-  bes2.~ bes8 aes |
-  \acciaccatura aes8 bes aes f4~ f2 |
-  r1 | \bar "||"
-  % ------------------
-  R1*2
-  R1*20
-  R1*16
-  R1*15
-  % ------------------
+  r4 r8 e c' c c c |
+  c4 b8 a~ a gis a4 |
+  r4 r8 e a a a a |
+  a4 g8 f~ f e f4 |
+  r4 r8 d e f e d |
+  e4 dis8 e~ e dis e4 |
+  r4 r8 e gis b d f |
+  e4 d8 c~ c b a \acciaccatura b8 c~ |
+  c4 r8 e, c' c c c |
+  c4 b~\prall b8 a gis a~ |
+  a e 4 e8 a a a a |
+  a4 g8 f~ f e f4 |
+  r4 r8 d e f e d |
+  e4 dis8 e~ e dis e4 |
+  r4 r8 e gis b d f |
+  e4 d8 c~ c b a4 |
+  r8 e' d c b gis b g'~ |
+  g8 g4.~ g2 |
+  
+  % B
   \mark \default
-  r2 r4. b8 | \bar "||"
-  c f, r4 r4. b8 |
-  c f r4 r4. a,8 |
-  bes f des c bes c des f |
-  bes c des c bes aes g f |
-  ees \acciaccatura fis8 g4 bes8 ees4 f8 g~ |
-  g8 f4 ees8~ ees des c bes |
-  bes aes bes aes ees4. r8 |
-  r4. aes8~ aes8 bes4 \acciaccatura {aes16 bes} ces8~ |
-  ces2~ \tuplet 3/2 {ces4 bes4 aes4} |
-  f4 es8 des8~ des ees4 des8 |
-  \acciaccatura dis8 e4. c8~ c2~ |
-  c8 e g des' c4 r |
-  r4 c8 f8~ f e4 c8~ |
-  c8 ces4 bes8~ bes4. aes8 |
-  \acciaccatura aes8 bes aes f4~ f2 |
-  r4 \tuplet 3/2 4 {aes8 bes aes g aes g aes g f~} | \bar "||"
-  f4 r r2 |
-  % ------------------
-  R1*15 |
-  R1*16 |
-  R1*3 |
-  % ------------------
+  %R1*6 |
+  r2 r8 c, b a |
+  gis4 a b2 |
+  %R1*9 |
+  
+  % C
   \mark \default
-  % Bridge one
-  \repeat volta 2 {
-    \bridge_repeat
-  }
-  \alternative {
-    {f8 f4 \acciaccatura g8 aes8~ aes4 f |}
-    {f8 f4 c'8~ c4 f4 |}
-  }
-  % Coro
-  % ------------------
-  R1*8 |
-  R1*8 |
-  R1*8 |
-  R1*7 |
-  % ------------------
+  r8 e, dis e f e c' b |
+  a4 r r8 e c b |
+  a b c d e f e d |
+  e4. b8~ b4 r4 |
+  r8 e dis e f e b' a |
+  gis4 r4 r8 \acciaccatura ais8 b4 a8 |
+  gis4 r8 e f e d e |
+  d4 r8 c~ c4 r |
+  r8 e dis e f e c' b |
+  a4 r r8 a gis a |
+  bes a gis a bes a g a |
+  \acciaccatura fis8 g4. f8~ f4 r |
+  \tuplet 3/2 2 {r4 \acciaccatura cis8 d4 e f e d} |
+  e4 r8 e dis e a c |
+  b2 a4 r |
+  r8 e' d c b gis b g'~ |
+  g g4.~ g2 |
+  
+  % D
   \mark \default
-  r4 r8 c8~ c4 f |
-  \repeat volta 4 {
-    \bridge_two_repeat
-  }
-  \alternative {
-    {aes8 r8 r4 r2 |}
-    {aes4 r8 c,~ c4 f4~ \bar "||"}
-  }
-  % Solo
+  %R1*7 |
+  r2 r8 c, a ais |
+  b2 r |
+  %R1*6 |
+  e4 d c b |
+  a r8 e'~ e2 |
+  
+  % E
   \mark \default
-  f4 r4 r8 f r c' |
-  r8 e, r bes' r c, f4 |
+  r2 \tuplet 3/2 {a,4 c e} |
+  a2 \acciaccatura gis8 a8 gis a gis |
+  r8 a e c~ c r r \acciaccatura e f~ |
+  f e d \acciaccatura b c~ c b a gis~ |
+  gis e4 r8 r4 r8 \acciaccatura e'8 f~ |
+  f d d e r f d e |
+  r c c d r e r c |
+  d c b a gis b4 a8~ |
+  a4. e'8~ e2~ |
+  e2. r4 |
+  %R1*32 |
+  %R1*7 |
+  
+  
+  % F
+  \mark \default
+  a,8 c e g fis4 a8 a~ |
+  a4 r r2 |
+  c,8 d b a~ a4 gis8 gis~ |
+  gis4 r r2 |
+  %R1*4 |
+  r2. r8 \acciaccatura gis8 a~ |
+  a c e e r c a d~ |
+  d4 r r r8 \acciaccatura cis8 d~ |
+  d c b c \tuplet 3/2 {d4 f e~} |
+  e8 b gis4 r r8 f'~ |
+  f d d e r f a g~ |
+  g4 r8 e~ e a gis b~ |
+  b gis4 e8~ e e e d~ |
+  d c4 a8~ a2 |
+  %R1*8 |
+  
+  % G
+  \mark \default
+  \key a \major
+  R1*2 |
+  r2. r8 b~ |
+  b cis4 d8 cis b4 f8~ |
+  f1~ |
+  f8 g4 a8 g f4 e8~ |
+  e1~ |
+  e1
+  \key a \minor
+  
+  % H
+  \mark \default
+  %R1*3 |
+  r2 r8 e a c |
+  \acciaccatura dis8 e4 c8 a~ a4 r8 f'8~ |
+  f d4 b8~ b a gis4~ |
+  gis8 \acciaccatura fis'8 g4 f8 r e d e~ |
+  e c4 a'8~ a2~ |
+  a2 r |
+  
+  %R1*7 |
+  %R1*16 |
+  %R1*8 |
+
+  % J
+  \mark \default
+  e4 c a4 r8 g'8~ |
+  g f4 b,8~ b4 r |
+  R1*2 |
+  e4 c a4 r8 g'8~ |
+  g f4 b,8~ b4 r |
   r1 |
-  r8 f e f g aes g f |
-  e f g aes g f e f |
-  g aes g4~ g8 r4 bes8~ |
-  bes4. aes8~ aes8 g4 f8~ |
-  f4 r4 r2 |
-  \tuplet 3/2 2 {r4 \acciaccatura a8 bes4 aes bes aes bes} |
-  \tuplet 7/4 {aes4 bes aes bes aes bes aes } |
-  \acciaccatura a8 bes8 e,4. r2 |
-  r2 r8 c' b c |
-  f es c a~ a ges4 f8~ |
-  f8 bes4 a8 c4 bes8 des |
-  c4 e8 g,~ g4 r |
-  r4 r8 bes8~ bes2 \bar "||"  
+  \tuplet 5/4 {e8 f e dis e} a4 r |
+  \tuplet 5/4 {e8 f e dis e~} e8 g e f~ |
+  f d b a gis a b gis |
+  a4 r r2 |
+  r8 e' a b c b a gis |
+  a b4 gis8 a4 r8 e |
+  f d b a gis a b c |
+  d dis e2.~ |
+  e1 |  
 }
 
 \score {
@@ -125,9 +156,9 @@ trumpetBb = \relative c'' {
     instrumentName = "Trumpet in Bb"
     midiInstrument = "trumpet"
   }
-  \transpose f g { \trumpetBb }
+  \transpose a a { \trumpetBb }
   \layout { }
   \midi {
-    \tempo 2=94
+    \tempo 2=84
   }
 }
