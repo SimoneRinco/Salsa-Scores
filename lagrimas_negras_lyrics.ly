@@ -33,7 +33,7 @@ chorus_two_melody = \relative c' {
   \global
   \partial 4 <e a c>8 <e b' d> | <a c e>4 <e c' e>8 <e c' e> <e c' e>4 <e c' e>8 <e c' e> |
   <b' d f>4 <b d f>8 <b d f>~ <b d f> <gis b d>4 <gis b>8~ | <gis b> <gis b> <gis b> <gis b> <gis b d>4 <e a c>8 <e gis b> |
-  \tuplet 3/2 {<e a e'>2 <e gis d'>4} <e c'>4 r2 |
+  \tuplet 3/1 {<e a e'>2 <e gis d'>4} <e c'>4 r2 |
   
   
 }
