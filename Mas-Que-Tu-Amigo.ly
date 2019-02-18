@@ -63,7 +63,7 @@ trumpetBb = \relative c'' {
     instrumentName = "Trumpet in Bb"
     midiInstrument = "trumpet"
   }
-  \transpose a a { \trumpetBb }
+  \transpose a b { \trumpetBb }
 }
 
 \layout {
