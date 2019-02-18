@@ -1,5 +1,9 @@
 \version "2.18.2"
 
+\header {
+  title = "Felices los 4"
+}
+
 global = {
   \set Score.markFormatter = #format-mark-box-letters
   \key d \minor
