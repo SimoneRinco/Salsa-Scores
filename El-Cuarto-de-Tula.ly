@@ -16,6 +16,7 @@ trumpetBb = \relative c'' {
   \transposition bes
   \repeat volta 2
   {
+    \mark \default
     a4-.\f a-. gis4. b8~ | b2 r |
     b4 b a4. c8~ | c2 r |
     %
@@ -32,6 +33,7 @@ trumpetBb = \relative c'' {
     r8 b'4 a8 gis4 f8 e~ |
     e8 d4 c8~ c4 r |
 
+    \mark \default
     R1*3 | r8 gis'\mf b f' d b gis a~ |
     a4 r r2 | R1*2 | r8 b, dis e f e gis a~ |
     a4 r r a8( g!~) | g4 r r g8 f~ | f4 r r f8 e~ | e4 r4 r8 gis( b a~) |
@@ -42,7 +44,7 @@ trumpetBb = \relative c'' {
   \alternative
   {
     {a e(\< dis e f fis g gis) |}
-    {a4\! r r2}
+    {\mark \default a4\! r r2}
   }
   R1* 6 | r8 a'8~\f a2.~ | \bar "||"
   a4. e8~-- e4 c-- | b4.-- d8 \tuplet 3/2 {g4 fis g} |
@@ -55,6 +57,7 @@ trumpetBb = \relative c'' {
   gis8 c4-- b-- a-- gis8~-- | gis f e d \tuplet 3/2 {c4 b a~} | a8 b c d e f dis e~ | \bar "||"
   e4 r r2 | R1*7 | \bar "||"
   s1 |
+  \mark \default
   R1*7 | \tuplet 3/2 2 {r4 a, c e a gis} | \bar "||" 
   b8 a4-- e-- c-- f8~ | f8 e d f~ f e d f~ | f e d f~ f e d e~ |
   e d c e~ e d c e~ | e d c e~ e2 |
