@@ -108,7 +108,7 @@ trombone = \relative c {
   \mark \default
   b'4\f-> r8 b( dis4->) r8 dis( | \bar "||"
   e4)-> r4 r2 | r1 | r1 | r4 r8  b-^ b-^ dis-^ dis-^ e-^ | r1 | r1 |
-  r2 r4 r8 d,~-. | d8 d4-. d-. d-. c8~( | c1~ | c1 | g'1~ | g |
+  r2 r4 r8 d,!~-. | d8 d4-. d-. d-. c8~( | c1~ | c1 | g'1~ | g |
   a1~\< | a~ | a~ |
   \mark \default
   a4) r\! b,4.-> e8~-> | \bar "||"
