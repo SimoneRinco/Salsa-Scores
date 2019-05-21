@@ -50,7 +50,7 @@ trumpetBb = \relative c' {
     R1*4
   }
   R1*2 |
-  g4\ff g8 fis8~ fis fis g4 | \bar "|."
+  g'4\ff g8 fis8~ fis fis g4 | \bar "|."
   
 }
 
@@ -81,9 +81,9 @@ altoSax = \relative c'' {
   \mark \default
   R1*3 | r4 r8 g'( b4 g8 b~ | \bar "||"
   b8)-. d4-. d8~-. d4. e8~-> | e4 r r2 | r1 | r4 r8 g, b4 g8 b~ | \bar "||"
-  b8 d4 d8~ d4. b8~ | b4 r r2 | r1 | r4 r8 g b4 g8 b~ | \bar "||"
   b8 d4 d8~ d4. e8~ | e4 r r2 | r1 | r4 r8 g, b4 g8 b~ | \bar "||"
-  b8 d4 d8~ d4. b8~ | b4 r r2 | r1 | r2 d-> | \bar "||"
+  b8 d4 d8~ d4. e8~ | e4 r r2 | r1 | r4 r8 g, b4 g8 b~ | \bar "||"
+  b8 d4 d8~ d4. e8~ | e4 r r2 | r1 | r2 d-> | \bar "||"
   \mark \default  
   R1*7 | r2 r4 r8 b,8~\mf-. | \bar "||"
   b8 a4-. g-. g-. c8~-. | c8 b( a4) r4 r8 a~ | a g4 fis fis b8~ | b a g4 r4 r8 b8~ |
@@ -109,25 +109,25 @@ trombone = \relative c {
   b'4\f-> r8 b( dis4->) r8 dis( | \bar "||"
   e4)-> r4 r2 | r1 | r1 | r4 r8  b-^ b-^ dis-^ dis-^ e-^ | r1 | r1 |
   r2 r4 r8 d,!~-. | d8 d4-. d-. d-. c8~( | c1~ | c1 | g'1~ | g |
-  a1~\< | a~ | a~ |
+  a1~\< | a | d~ |
   \mark \default
-  a4) r\! b,4.-> e8~-> | \bar "||"
+  d4) r\! b4.-> e8~-> | \bar "||"
   e4 r4 r2 | r1 | r1 | r4 r8  b-^ b-^ dis-^ dis-^ e-^ | r1 | r1 |
-  r2 r4 r8 d!~-. | d8 d4-. d-. d-. c8~( | c1~ | c1 | g'1~ | g | a1 |
+  r2 r4 r8 d,!~-. | d8 d4-. d-. d-. c8~( | c1~ | c1 | g'1~ | g | a1 |
   }
   \alternative {
-  {d, | fis | g1) | R1*16}
+  {d, | g~ | g1) | R1*16}
   {a1~\>}
   }
   a1 | r1\!\fermata | \bar "||"
   \mark \default  
-  R1*3 | r4 r8 b( d4 b8 d~ | \bar "||"
+  R1*3 | r4 r8 \clef tenor b( d4 b8 d~ | \bar "||"
   d8)-. fis4-. g8~-. g4. c,8~-> | c4 r r2 | r1 | r4 r8 b d4 b8 d~ | \bar "||"
-  d8 fis4 g8~ g4. g8~ | g4 r r2 | r1 | r4 r8 b, d4 b8 d~ | \bar "||"
   d8 fis4 g8~ g4. c,8~ | c4 r r2 | r1 | r4 r8 b d4 b8 d~ | \bar "||"
-  d8 fis4 g8~ g4. g8~ | g4 r r2 | r1 | r2 g,-> | \bar "||"
+  d8 fis4 g8~ g4. c,8~ | c4 r r2 | r1 | r4 r8 b d4 b8 d~ | \bar "||"
+  d8 fis4 g8~ g4. c,8~ | c4 r r2 | r1 | r2 g'-> | \bar "||"
   \mark \default  
-  R1*7 | r2 r4 r8 d8~\mf-. | \bar "||"
+  R1*7 | r2 r4 r8 \clef bass d,8~\mf-. | \bar "||"
   d8 c4-. b-. b-. e8~-. | e8 d( c4) r4 r8 c~ | c b4 a a d8~ | d c b4 r4 r8 d8~ |
   d8 c4-. b-. b-. e8~-. | e8 d( c4) r4 r8 c~ | c b4 a a d8~ | d c b4 r4 r8 d8~ |
   d8 c4-. b-. b-. e8~-. | e8 d( c4) r4 r8 c~ | c b4 a a d8~ | d c b4 r4 r8 d8~ |
@@ -138,12 +138,12 @@ trombone = \relative c {
     d8 c4-. b-. b-. e8~-. | e8 d( c4) r4 r8 c~ | c b4 a a d8~ | d c b4 r4 r8 d8~ |
   }
   d8 c4-. b-. b-. e8~-. | e8 d( c4) r2 |
-  d4\ff d8 d~ d d g4 | \bar "|."
+  \clef tenor d'4\ff d8 d~ d d g4 | \bar "|."
   
 }
 
 trumpetBbPart = \new Staff \with {
-  instrumentName = "Trumpet in Bb"
+  instrumentName = "Trumpet Bb"
   midiInstrument = "trumpet"
 } \trumpetBb
 
