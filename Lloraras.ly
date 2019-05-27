@@ -65,7 +65,7 @@ altoSax = \relative c'' {
   \repeat volta 2
   {
     c4\f r8 c~-> c2 | a2\<( d4 c | b4) r8\! b8~-> b2 |
-    a4( c8 b a g! a b) |c4 r8 c~-> c2 | a2\<( d4 a |
+    a4( c8 b a g a b) |c4 r8 c~-> c2 | a2\<( d4 a |
   }
   \alternative
   {
